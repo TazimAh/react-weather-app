@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "",
     element: <App />,
-    // errorElement: <Error />,
+    errorElement: <Error />,
     children: [
       {
         path: "",
@@ -33,10 +33,6 @@ const router = createBrowserRouter([
         element: <Settings />,
       },
     ],
-  },
-  {
-    path: "*",
-    element: <Error />,
   },
 ]);
 

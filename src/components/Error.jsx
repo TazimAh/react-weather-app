@@ -12,13 +12,6 @@ export default function Error() {
         >
           Go Home
         </Link>
-
-        <a
-          href={"/"}
-          className=" text-center bg-slate-300 px-3 py-2 my-2 rounded-md w-fit m-auto"
-        >
-          Go Home
-        </a>
       </div>
     </>
   );
