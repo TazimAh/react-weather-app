@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import SideButton from "./SideButton";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function SideBar() {
   return (
@@ -18,19 +18,39 @@ export default function SideBar() {
       </div>
 
       <div>
-        <Link to={"/"}>
+        <NavLink
+          to={"/"}
+          className={({ isActive }) => {
+            return isActive ? "text-white" : "";
+          }}
+        >
           <SideButton givenIcon={faCloudSunRain} name={"Weather"} />
-        </Link>
-        <Link to={"/cities"}>
+        </NavLink>
+        <NavLink
+          to={"/cities"}
+          className={({ isActive }) => {
+            return isActive ? "text-white" : "";
+          }}
+        >
           <SideButton givenIcon={faCity} name={"Cities"} />
-        </Link>
-        <Link to={"/map"}>
+        </NavLink>
+        <NavLink
+          to={"/map"}
+          className={({ isActive }) => {
+            return isActive ? "text-white" : "";
+          }}
+        >
           <SideButton givenIcon={faMap} name={"Map"} />
-        </Link>
+        </NavLink>
 
-        <Link to={"/settings"}>
+        <NavLink
+          to={"/settings"}
+          className={({ isActive }) => {
+            return isActive ? "text-white" : "";
+          }}
+        >
           <SideButton givenIcon={faSliders} name={"Settings"} />
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
